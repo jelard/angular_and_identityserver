@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Pure Html App</title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body ng-app="app" ng-controller="mainController as vm">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div><img src="angularlogo.png" class="headerLogo" /></div>
+            <div class="navbar-header">
+                <a href="#/trips/" class="navbar-brand">Trips</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href=""
+                           ng-if="!vm.mgr.expired"
+                           ng-bind-template="Logout ({{vm.mgr.profile.given_name}} {{vm.mgr.profile.family_name}})"
+                           ng-click="vm.logOutOfIdSrv()"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<div ng-view></div>
+
+<script src="Scripts/jquery-1.9.1.min.js"></script>
+<script src="Scripts/bootstrap.min.js"></script>
+<script src="Scripts/angular.min.js"></script>
+<script src="Scripts/angular-route.min.js"></script>
+
+<script src="sampleapp/common/common.services.js"></script>
+<!--<script src="sampleapp/common/tokenContainer.js"></script>-->
+<script src="sampleapp/common/tripsRepository.js"></script>
+<script src="sampleapp/app/app.js"></script>
+<script src="sampleapp/app/mainController.js"></script>
+<script src="sampleapp/app/trips/tripIndexController.js"></script>
+<script src="Scripts/oidc-token-manager.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿
+    <h2 class="leftMarginDefault">My Trip Gallery</h2>
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="trip in vm.trips">
+        <td>{{trip.id}}</td>
+        <td>{{trip.name}}</td>
+    </tr>
+    </tbody>
+</table>  
